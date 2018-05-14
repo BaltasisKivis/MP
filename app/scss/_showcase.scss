@@ -1,0 +1,198 @@
+/*
+
+	Showcase section
+
+*/
+
+.showcase {
+	font-family: 'Open Sans';
+	background: var(--showcase-background);
+	padding-bottom: 15rem;
+	overflow: hidden;
+}
+
+.showcase__header,
+.location__header,
+.contact__info__header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 10rem;
+}
+
+.showcase__header__title,
+.location__header__title {
+	width: 100%;
+	max-width: 1200px;
+	font-size: 1.8rem;
+	font-weight: 600;
+	color: var(--section-title);
+	text-transform: uppercase;
+	padding: 0 5rem;
+}
+
+.showcase__slideshow {
+	display: flex;
+}
+
+.showcase__slideshow__state {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15%;
+}
+
+.showcase__slideshow__state__controls {
+	position: absolute;
+	display: flex;
+	top: 1rem;
+	right: -1rem;
+}
+
+.showcase__slideshow__state__controls__btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3rem;
+	height: 3rem;
+	background: white;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	padding: 1rem;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.showcase__slideshow__state__controls__btn:hover {
+	opacity: .85;
+}
+
+.showcase__slideshow__state__controls__btn--left__svg,
+.showcase__slideshow__state__controls__btn--right__svg {
+	height: 100%;
+	opacity: .4;
+}
+
+.showcase__slideshow__state__controls__btn--left {
+	margin-right: .3rem;
+}
+
+.showcase__slideshow__state__controls__btn--right__svg {
+	transform: rotate(180deg);
+}
+
+.showcase__slideshow__state__index,
+.contact__index__title {
+	font-size: .8rem;
+	color: #888682;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .4rem;
+	writing-mode: vertical-rl;
+    transform: rotate(180deg)
+}
+
+.showcase__slideshow__slide {
+	background: var(--showcase-slideshow-bg);
+}
+
+.showcase__slideshow__content__wrap__slide {
+	width: 30vw;
+	margin-bottom: -15rem;
+}
+
+.showcase__slideshow__content__wrap__slide__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	box-shadow: 20px 35px 36px 10px rgba(0, 0, 0, 0.15);
+}
+
+.showcase__slideshow__content__wrap__img--1 {
+	background-image: url('assets/slide1.jpg');
+	background-size: cover;
+}
+
+.showcase__slideshow__content {
+	display: flex;
+	justify-content: space-around;
+	flex-grow: 1;
+	align-items: center;
+	background: var(--showcase-slideshow-bg);
+	color: var(--showcase-content);
+	padding: 4rem;
+}
+
+.showcase__slideshow__content__wrap {
+	display: flex;
+	align-items: center;
+}
+
+.showcase__slideshow__content__wrap__textarea {
+	width: 540px;
+	margin-left: 7vw;
+}
+
+.showcase__slideshow__content__wrap__textarea__title {
+	text-transform: uppercase;
+	font-size: 1.8rem;
+	font-weight: 700;
+}
+
+.showcase__header__title--strong,
+.showcase__slideshow__content__wrap__textarea__title--strong,
+.location__header__title--strong,
+.contact__form-container__title--strong {
+	font-weight: 800;
+}
+
+.showcase__slideshow__content__wrap__textarea__text {
+	line-height: 1.7; 
+}
+
+.showcase__slideshow__content__wrap__textarea__btn {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 9rem;
+	height: 2.75rem;
+	margin-top: 2rem;
+	background: none;
+	border: 1px solid rgba(255, 255, 255, .2);
+	border-radius: 5px;
+	outline: none;
+	padding: 0  1rem;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.showcase__slideshow__content__wrap__textarea__btn:hover {
+	border: 1px solid rgb(255, 255, 255);
+} 
+
+.showcase__slideshow__content__wrap__textarea__btn:hover .showcase__slideshow__content__textarea__btn__txt {
+	color: rgb(255, 255, 255);
+}
+
+.showcase__slideshow__content__textarea__btn:hover .showcase__slideshow__content__textarea__btn__svg {
+	opacity: 1;
+}
+
+.showcase__slideshow__content__wrap__textarea__btn__txt {
+	font-family: 'Open Sans', sans-serif;
+	font-size: .75rem;
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: rgba(255, 255, 255, .5);
+	text-transform: uppercase;
+	transition: all .2s;
+}
+
+.showcase__slideshow__content__wrap__textarea__btn__svg {
+	height: 1rem;
+	opacity: .5;
+	transition: all .2s;
+}

@@ -1,0 +1,80 @@
+/*
+	
+	Developer section
+
+*/
+
+.developer {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+	background-image: url('assets/vilnius.jpg');
+	background-size: cover;
+	background-position: center center;
+}
+
+.developer__logos {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	height: 4rem;
+}
+
+.developer__slideshow {
+	padding: 0 1rem;
+}
+
+.developer__slideshow__content {
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.developer__slideshow__content__logo {
+	height: 4rem;
+}
+
+.developer__slideshow__content__title {
+	font-size: 2.6rem;
+	font-weight: 300;
+}
+
+.developer__slideshow__content__text {
+	line-height: 1.7
+}
+
+.developer__slideshow__controls {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.developer__slideshow__controls__circle {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin-left: .5rem;
+	padding: 0;
+	background: none;
+	border: 1px solid rgba(233, 194, 13, 0.5);
+	border-radius: 50%;
+	outline: none;
+	box-sizing: border-box;
+	cursor: pointer;
+	transition: all .2s;
+}
+
+.developer__slideshow__controls__circle:not(.developer__slideshow__controls__circle--active):hover {
+	border: 1px solid rgb(233, 194, 13);
+}
+
+.developer__slideshow__controls__circle:first-of-type {
+	margin-left: 0;
+}
+
+.developer__slideshow__controls__circle--active {
+	border: 2px solid #e9c20d;
+}
