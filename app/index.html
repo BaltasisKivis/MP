@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="lt">
+	<head>
+		<title>Gyvenimas slėnyje</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<header class="header">
+			<nav class="header__nav">
+				<h1 class="header__logo">Logo</h1>
+				<ul id="menuList" class="header__nav__list">
+					<li class="header__nav__list__li"><a class="header__nav__list__li__a" href="#">Kotedžai</a></li>
+					<li class="header__nav__list__li"><a class="header__nav__list__li__a header__nav__list__li__a--active" href="#">Gyvenimas slėnyje</a></li>
+					<li class="header__nav__list__li"><a class="header__nav__list__li__a" href="#">Galerija</a></li>
+					<li class="header__nav__list__li"><a class="header__nav__list__li__a" href="#">Gyventojams</a></li>
+					<li class="header__nav__list__li"><a class="header__nav__list__li__a" href="#">Naujienos</a></li>
+					<li class="header__nav__list__li"><a class="header__nav__list__li__a" href="#">Kontaktai</a></li>
+				</ul>
+				<div id="menuBtn" class="mobile-menu" onclick="menuToggle()">
+					<img id="menuOpen" class="mobile-menu__img mobile-menu__img--active" src="assets/menu.svg">
+					<img id="menuClose" class="mobile-menu__img" src="assets/menu-close.svg">
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section class="showcase">
+				<header class="showcase__header">
+					<h1 class="showcase__header__title">Gyvenimas <span class="showcase__header__title--strong">slėnyje</span></h1>	
+				</header>
+				<div class="showcase__slideshow">
+					<div class="showcase__slideshow__state">
+						<div class="showcase__slideshow__state__controls">
+							<button class="showcase__slideshow__state__controls__btn showcase__slideshow__state__controls__btn--left"><img class="showcase__slideshow__state__controls__btn--left__svg" alt="praeitas" src="assets/arrow.svg"></button>
+							<button class="showcase__slideshow__state__controls__btn showcase__slideshow__state__controls__btn--right"><img class="showcase__slideshow__state__controls__btn--right__svg" alt="kitas" src="assets/arrow.svg"></button>
+						</div>
+						<h3 class="showcase__slideshow__state__index">Privalumas nr. <span>1</span></h3>
+					</div>
+					<div class="showcase__slideshow__content">
+						<div class="showcase__slideshow__content__wrap">
+							<div class="showcase__slideshow__content__wrap__slide">
+								<img class="showcase__slideshow__content__wrap__slide__img" alt="Gilužio ežeras" src="assets/slide1.jpg">
+							</div>
+							<div class="showcase__slideshow__content__wrap__textarea">
+								<h1 class="showcase__slideshow__content__wrap__textarea__title">Netoliese - <br><span class="showcase__slideshow__content__wrap__textarea__title showcase__slideshow__content__wrap__textarea__title--strong">Gilužio ežeras</span></h1>
+								<p class="showcase__slideshow__content__wrap__textarea__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi molestie erat vitae odio auctor luctus ac id lorem. Aliquam aliquam massa et magna suscipit, eu vehicula dui sollicitudin. Phasellus rhoncus, nulla at molestie vulputate, risus libero maximus nisl, venenatis aliquet urna ligula sed nisi. Vestibulum id ante dolor. Donec bibendum sem ullamcorper enim dignissim ullamcorper.</p>
+								<button class="showcase__slideshow__content__wrap__textarea__btn">
+									<img class="showcase__slideshow__content__wrap__textarea__btn__svg" src="assets/note.svg">
+									<span class="showcase__slideshow__content__wrap__textarea__btn__txt">klausyti</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+			<section class="location">
+				<header class="location__header">
+					<h1 class="location__header__title">vieta <span class="location__header__title--strong">mieste</span></h1>
+				</header>
+				<div class="location__content">
+					<div class="location__content__details">
+
+						<div class="location__content__details__navigation">
+							<div id="map-shop-btn" class="location__content__details__navigation__tab" onclick="showContent(event, 'map-shop-content')"><img class="location__content__details__navigation__tab__icon" src="assets/map-shop.svg"></div>
+							<div id="map-book-btn" class="location__content__details__navigation__tab" onclick="showContent(event, 'map-book-content')"><img class="location__content__details__navigation__tab__icon" src="assets/map-book.svg"></div>
+							<div id="map-health-btn" class="location__content__details__navigation__tab location__content__details__navigation__tab--active" onclick="showContent(event, 'map-health-content')"><img class="location__content__details__navigation__tab__icon location__content__details__navigation__tab__icon--active" src="assets/map-health.svg"></div>
+							<div id="map-kid-btn" class="location__content__details__navigation__tab" onclick="showContent(event, 'map-kid-content')"><img class="location__content__details__navigation__tab__icon" src="assets/map-kid.svg"></div>
+							<div id="map-sport-btn" class="location__content__details__navigation__tab" onclick="showContent(event, 'map-sport-content')"><img class="location__content__details__navigation__tab__icon" src="assets/map-sport.svg"></div>
+							<div id="map-bank-btn" class="location__content__details__navigation__tab" onclick="showContent(event, 'map-bank-content')"><img class="location__content__details__navigation__tab__icon" src="assets/map-bank.svg"></div>
+							<div id="map-arrows-btn" class="location__content__details__navigation__tab" onclick="showContent(event, 'map-arrows-content')"><img class="location__content__details__navigation__tab__icon" src="assets/map-arrows.svg"></div>
+						</div>
+
+						<div id="map-shop-content" class="location__content__details__properties">
+							<h2 class="location__content__details__properties__title">Parduotuvės ir prekybos centrai</h2>
+							<ul class="location__content__details__properties__list">
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Rimi</p>
+									<span class="location__content__details__properties__list__item__distance">400</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Aibė</p>
+									<span class="location__content__details__properties__list__item__distance">90</span>
+								</li>	
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Maxima XX</p>
+									<span class="location__content__details__properties__list__item__distance">970</span>
+								</li>
+							</ul>
+						</div>
+
+						<div id="map-book-content" class="location__content__details__properties">
+							<h2 class="location__content__details__properties__title">Knygynai ir bibliotekos</h2>
+							<ul class="location__content__details__properties__list">
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Martyno Mažvydo biblioteka</p>
+									<span class="location__content__details__properties__list__item__distance">2400</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Knygynas "Pegasas"</p>
+									<span class="location__content__details__properties__list__item__distance">150</span>
+								</li>	
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Pilaitės biblioteka</p>
+									<span class="location__content__details__properties__list__item__distance">840</span>
+								</li>
+							</ul>
+						</div>
+
+						<div id="map-health-content" class="location__content__details__properties location__content__details__properties--active">
+							<h2 class="location__content__details__properties__title">vaistinės ir gydymo įstaigos</h2>
+							<ul class="location__content__details__properties__list">
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Poliklinika</p>
+									<span class="location__content__details__properties__list__item__distance">900</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Vaistinė "Pilanta"</p>
+									<span class="location__content__details__properties__list__item__distance">600</span>
+								</li>	
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Šeimos sveikatos namai "Gyda"</p>
+									<span class="location__content__details__properties__list__item__distance">750</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Marijos vaistinė</p>
+									<span class="location__content__details__properties__list__item__distance">1200</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Eurovaistinė (prekybos centre "Pupa")</p>
+									<span class="location__content__details__properties__list__item__distance">800</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">B. Kiselienės sveikatingumo studija</p>
+									<span class="location__content__details__properties__list__item__distance">1200</span>
+								</li>
+							</ul>
+						</div>
+
+						<div id="map-kid-content" class="location__content__details__properties">
+							<h2 class="location__content__details__properties__title">Mokyklos ir darželiai</h2>
+							<ul class="location__content__details__properties__list">
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Pilaitės pradinė mokykla</p>
+									<span class="location__content__details__properties__list__item__distance">2500</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Pilaitės lopšelis-darželis "Ąžuoliukas"</p>
+									<span class="location__content__details__properties__list__item__distance">430</span>
+								</li>	
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Vilniaus Kolegija</p>
+									<span class="location__content__details__properties__list__item__distance">4800</span>
+								</li>
+							</ul>
+						</div>
+
+						<div id="map-sport-content" class="location__content__details__properties">
+							<h2 class="location__content__details__properties__title">Sportas ir laisvalaikis</h2>
+							<ul class="location__content__details__properties__list">
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Futbolo aikštė</p>
+									<span class="location__content__details__properties__list__item__distance">890</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Krepšinio aikštelė</p>
+									<span class="location__content__details__properties__list__item__distance">900</span>
+								</li>	
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Lauko treniruokliai</p>
+									<span class="location__content__details__properties__list__item__distance">500</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Skatepark</p>
+									<span class="location__content__details__properties__list__item__distance">1500</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Baseinas</p>
+									<span class="location__content__details__properties__list__item__distance">1000</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Šokių studija "Salsa dream"</p>
+									<span class="location__content__details__properties__list__item__distance">4800</span>
+								</li>
+							</ul>
+						</div>
+
+						<div id="map-bank-content" class="location__content__details__properties">
+							<h2 class="location__content__details__properties__title">Bankomatai</h2>
+							<ul class="location__content__details__properties__list">
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Swedbank</p>
+									<span class="location__content__details__properties__list__item__distance">1800</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">SEB</p>
+									<span class="location__content__details__properties__list__item__distance">250</span>
+								</li>	
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Luminor</p>
+									<span class="location__content__details__properties__list__item__distance">970</span>
+								</li>
+							</ul>
+						</div>
+
+						<div id="map-arrows-content" class="location__content__details__properties">
+							<h2 class="location__content__details__properties__title">Lorem ipsum</h2>
+							<ul class="location__content__details__properties__list">
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Dolar</p>
+									<span class="location__content__details__properties__list__item__distance">241</span>
+								</li>
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Sit</p>
+									<span class="location__content__details__properties__list__item__distance">623</span>
+								</li>	
+								<li class="location__content__details__properties__list__item">
+									<p class="location__content__details__properties__list__item__name">Amet</p>
+									<span class="location__content__details__properties__list__item__distance">2415</span>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<div class="location__content__map" id="map"><img class="location__content__map__img" alt="Pilaitės žemėlapis" src="assets/map.jpg"></div>
+				</div>
+			</section>
+
+
+
+
+			<section class="developer">
+				<img class="developer__logos" alt="citus partneriai" src="assets/developer-logos.png">
+				<div class="developer__slideshow">
+					<div class="developer__slideshow__content">
+						<img class="developer__slideshow__content__logo" alt="Citus" src="assets/citus-logo.svg">
+						<h1 class="developer__slideshow__content__title">nekilnojamojo turto vystytojas</h1>
+						<p class="developer__slideshow__content__text">Bendradarbiaujame su Lietuvos nekilnojamojo turto plėtros asociacija,<br>Nacionaline pasyvaus namo asociacija,<br>Kultūros paveldo departamentu ir Certified Passive House Institute Vokietijoje.</p>
+					</div>
+					<div class="developer__slideshow__controls">
+						<button class="developer__slideshow__controls__circle"></button>
+						<button class="developer__slideshow__controls__circle"></button>
+						<button class="developer__slideshow__controls__circle"></button>
+						<button class="developer__slideshow__controls__circle developer__slideshow__controls__circle--active"></button>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact">
+		 		<div class="contact__info">
+		 			<div>
+			 			<div class="contact__info__header">
+				 			<h1 class="contact__info__header__title">kontaktai</h1>
+			 			</div>
+			 			<div class="contact__info__people">
+				 			<div class="contact__info__people__person">
+				 				<img class="contact__info__people__person__img" alt="Laura Žvaliauskaitė" src="assets/laura.jpg">
+				 				<h2 class="contact__info__people__person__name">Laura Žvaliauskaitė</h2>
+				 				<h3 class="contact__info__people__person__role">Pardavimų vadybininkė</h3>
+				 				<a href="mailto:laurak@cc.lt" class="contact__info__people__person__email"><img class="contact__info__people__person__email__icon" src="assets/mail.svg">laurak@cc.lt</a>
+				 				<a href="tel:+37065556408" class="contact__info__people__person__phone"><img class="contact__info__people__person__phone__icon" src="assets/phone.svg">+370 655 56408</a>
+				 			</div>
+				 			<div class="contact__info__people__person">
+				 				<img class="contact__info__people__person__img" alt="Monika Kuzminskaitė" src="assets/monika.jpg">
+				 				<h2 class="contact__info__people__person__name">Monika Kuzminskaitė</h2>
+				 				<h3 class="contact__info__people__person__role">Pardavimų vadybininkė</h3>
+				 				<a href="mailto:monika.k@cc.lt" class="contact__info__people__person__email"><img class="contact__info__people__person__email__icon" src="assets/mail.svg">monika.k@cc.lt</a>
+				 				<a href="tel:+370 682 02272" class="contact__info__people__person__phone"><img class="contact__info__people__person__phone__icon" src="assets/phone.svg">+370 682 02272</a>
+				 			</div>
+			 			</div>
+		 			</div>
+		 		</div>
+		 		<div class="contact__form-container">
+		 			<h2 class="contact__form-container__title"><span class="contact__form-container__title--strong">laiko</span> rezervacija susitikimui</h2>
+		 			<form id="form" class="contact__form-container__form" method="post" onsubmit="return validateForm()" novalidate>
+		 				<input id="email" class="contact__form-container__form__input" type="email" placeholder="El. paštas">
+		 				<input id="phone" class="contact__form-container__form__input" type="tel" placeholder="Telefonas">
+		 				<input id="message" class="contact__form-container__form__input" type="text" placeholder="Rezervuoju laiką susitikimui x d. x val.">
+		 				<button class="contact__form-container__form__submit">Siųsti</button>
+		 				<span id="error-message" class="contact__form-container__form__submit__error"><img class="contact__form-container__form__submit__error__icon" alt="Klaida" src="assets/warning.svg">Duomenys įvesti klaidingai</span>
+		 			</form>
+		 		</div>
+		 		<div class="contact__index"><h3 class="contact__index__title">susisiekite loremipsum</h3></div>
+			</section>
+
+			<footer class="footer">
+				<div class="footer__container">
+					<a href="https://citus.lt/" class="footer__container__link"><img class="footer__container__link__logo" src="assets/citus-logo.png"></a>
+					<p class="footer__container__copy">© 2016. Visos teisės saugomos | e-solution: <a class="footer__container__copy__link" href="http://gaumina.lt/index.html">Gaumina</a></p>
+				</div>
+			</footer>
+		</main> 
+		<script src="menu.js"></script>
+		<script src="form-validation.js"></script>
+		<script src="map-nav.js"></script>
+	</body>
+</html>
